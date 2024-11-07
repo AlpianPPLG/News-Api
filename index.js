@@ -13,53 +13,95 @@ app.use(rateLimiter);
 // Data berita dengan penambahan accessCount
 let newsData = [
   {
-    id: 1,
-    title: "Peluncuran iPhone 15: Fitur Terbaru dan Harga",
+    id: 6,
+    title: "Pemerintah Umumkan Kebijakan Baru untuk Mengatasi Perubahan Iklim",
     content:
-      "Apple baru saja meluncurkan iPhone 15 dengan sejumlah fitur terbaru, termasuk layar ProMotion 120Hz, chip A17 Bionic, dan kamera 48MP yang ditingkatkan. Harga iPhone 15 mulai dari $999 di pasar internasional.",
+      "Pemerintah mengumumkan serangkaian kebijakan baru untuk mengurangi emisi karbon dan berkomitmen mencapai net zero emissions pada tahun 2050. Langkah-langkah termasuk insentif untuk energi terbarukan dan peraturan ketat bagi industri berat.",
+    category: "Lingkungan",
+    publishedAt: "2024-09-15",
+    author: "Rina Wijaya",
+    accessCount: 0,
+  },
+  {
+    id: 7,
+    title:
+      "Samsung Luncurkan Galaxy Z Fold 6 dengan Fitur Kamera Under-Display",
+    content:
+      "Samsung memperkenalkan Galaxy Z Fold 6 yang dilengkapi dengan teknologi kamera di bawah layar, memberikan tampilan layar penuh tanpa gangguan. Perangkat ini juga membawa peningkatan dalam daya tahan lipatan dan kualitas kamera.",
     category: "Teknologi",
+    publishedAt: "2024-09-14",
+    author: "Alex Kim",
+    accessCount: 0,
+  },
+  {
+    id: 8,
+    title: "Festival Budaya Nusantara Menarik Ribuan Wisatawan Mancanegara",
+    content:
+      "Festival Budaya Nusantara berhasil menarik ribuan wisatawan dari berbagai negara. Acara ini menampilkan beragam tarian tradisional, kuliner khas daerah, dan pameran kerajinan tangan yang memperkenalkan budaya Indonesia ke dunia.",
+    category: "Budaya",
+    publishedAt: "2024-09-13",
+    author: "Dewi Lestari",
+    accessCount: 0,
+  },
+  {
+    id: 9,
+    title: "Tesla Meluncurkan Fitur Pengemudian Otomatis Generasi Ketiga",
+    content:
+      "Tesla mengumumkan fitur pengemudian otomatis generasi ketiga yang dirancang untuk memungkinkan mobil bergerak sepenuhnya tanpa pengawasan pengemudi di jalan raya tertentu. Peningkatan ini diharapkan meningkatkan keamanan dan efisiensi perjalanan.",
+    category: "Otomotif",
+    publishedAt: "2024-09-12",
+    author: "Chris Brown",
+    accessCount: 0,
+  },
+  {
+    id: 10,
+    title: "Pariwisata Bali Meningkat Pasca Pandemi",
+    content:
+      "Industri pariwisata di Bali mengalami peningkatan signifikan pasca pandemi COVID-19. Banyak wisatawan domestik dan internasional kembali menikmati keindahan pulau dewata, meningkatkan perekonomian lokal dan sektor pariwisata.",
+    category: "Pariwisata",
     publishedAt: "2024-09-11",
-    author: "John Doe",
-    accessCount: 0, // Tambahkan access count
+    author: "Anita Sari",
+    accessCount: 0,
   },
   {
-    id: 2,
-    title: "Ekonomi Indonesia Tumbuh 5,2% pada Kuartal Ketiga 2024",
+    id: 11,
+    title:
+      "Penelitian Menunjukkan Konsumsi Kopi Mampu Meningkatkan Produktivitas",
     content:
-      "Badan Pusat Statistik (BPS) melaporkan bahwa pertumbuhan ekonomi Indonesia mencapai 5,2% pada kuartal ketiga 2024. Peningkatan ini didorong oleh konsumsi rumah tangga dan ekspor yang lebih tinggi dari perkiraan.",
-    category: "Ekonomi",
+      "Studi terbaru menunjukkan bahwa konsumsi kopi dapat membantu meningkatkan produktivitas dan fokus kerja. Namun, para ahli juga mengingatkan agar konsumsi kopi tetap dalam batas wajar untuk menghindari efek samping negatif.",
+    category: "Kesehatan",
     publishedAt: "2024-09-10",
-    author: "Jane Smith",
+    author: "Michael Tan",
     accessCount: 0,
   },
   {
-    id: 3,
-    title: "Timnas Indonesia Lolos ke Final Piala AFF 2024",
+    id: 12,
+    title: "Teknologi 6G Diharapkan Hadir pada Tahun 2030",
     content:
-      "Tim nasional sepak bola Indonesia berhasil melaju ke final Piala AFF 2024 setelah mengalahkan Thailand dengan skor 3-1 pada pertandingan semifinal. Ini adalah pencapaian luar biasa bagi timnas Indonesia setelah 8 tahun.",
-    category: "Olahraga",
+      "Para peneliti teknologi memprediksi jaringan 6G akan tersedia pada tahun 2030, menawarkan kecepatan yang jauh lebih tinggi dan koneksi yang lebih stabil dibandingkan teknologi 5G. Teknologi ini diharapkan dapat mendukung berbagai industri.",
+    category: "Teknologi",
     publishedAt: "2024-09-09",
-    author: "Ahmad Taufik",
+    author: "Liam Zhang",
     accessCount: 0,
   },
   {
-    id: 4,
-    title: "NASA Berhasil Mendaratkan Rover Terbaru di Mars",
+    id: 13,
+    title: "Bursa Saham Global Mengalami Penurunan Drastis",
     content:
-      'NASA mengumumkan keberhasilan pendaratan rover Mars terbaru mereka, "Perseverance II", di permukaan planet merah. Rover ini akan menjalankan misi untuk mencari tanda-tanda kehidupan mikroba purba.',
-    category: "Sains",
+      "Bursa saham global mengalami penurunan tajam akibat kekhawatiran investor terhadap ketidakstabilan ekonomi global. Indeks utama seperti S&P 500 dan Nikkei mengalami penurunan yang signifikan.",
+    category: "Ekonomi",
     publishedAt: "2024-09-08",
-    author: "Emily Zhang",
+    author: "Sarah Johnson",
     accessCount: 0,
   },
   {
-    id: 5,
-    title: "Rupiah Menguat Terhadap Dolar AS, Menjadi Rp 14.200/USD",
+    id: 14,
+    title: "Startup Lokal Meraih Pendanaan 10 Juta Dolar",
     content:
-      "Nilai tukar rupiah terhadap dolar Amerika Serikat (AS) menguat menjadi Rp 14.200 per USD pada perdagangan hari ini. Penguatan ini didorong oleh masuknya aliran modal asing dan kestabilan pasar domestik.",
-    category: "Keuangan",
+      "Sebuah startup teknologi asal Indonesia berhasil meraih pendanaan sebesar 10 juta dolar dalam putaran seri B untuk mengembangkan teknologi kecerdasan buatan yang mendukung sektor kesehatan.",
+    category: "Bisnis",
     publishedAt: "2024-09-07",
-    author: "Budi Hartono",
+    author: "Yosef Santoso",
     accessCount: 0,
   },
 ];
@@ -87,6 +129,7 @@ app.post("/news/:id/rating", apiKeyMiddleware, (req, res) => {
     return res.status(400).json({ error: "Rating harus antara 1 dan 5" });
   }
 
+  // Cari berita berdasarkan ID
   const newsItem = newsData.find((news) => news.id === newsId);
 
   if (newsItem) {
@@ -112,6 +155,7 @@ app.get("/news", apiKeyMiddleware, (req, res) => {
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
 
+  // Menyaring berita berdasarkan halaman dan limit
   const paginatedNews = newsData.slice(startIndex, endIndex);
   const totalPages = Math.ceil(newsData.length / limit);
 
@@ -172,6 +216,62 @@ app.get("/health", (req, res) => {
     message: "API is running smoothly.",
     timestamp: new Date().toISOString(), // Menampilkan waktu server saat ini
   });
+});
+
+// Middleware untuk penanganan error umum
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    status: "error",
+    message: "Terjadi kesalahan pada server. Silakan coba lagi nanti.",
+  });
+});
+
+// Penanganan route yang tidak ditemukan
+app.use((req, res) => {
+  res.status(404).json({
+    status: "error",
+    message: "Endpoint tidak ditemukan",
+  });
+});
+
+// Endpoint untuk statistik
+app.get("/stats", (req, res) => {
+  const totalNews = newsData.length;
+  const totalHits = newsData.reduce((acc, news) => acc + news.accessCount, 0);
+  const categories = [...new Set(newsData.map((news) => news.category))];
+  const categoryCount = categories.length;
+
+  res.json({
+    totalNews,
+    totalHits,
+    categoryCount,
+    categories,
+  });
+});
+
+// Cache untuk endpoint trending news
+let trendingCache = null;
+let trendingCacheTimestamp = 0;
+const CACHE_DURATION = 60 * 1000; // Durasi cache dalam milidetik (1 menit)
+
+app.get("/news/trending", apiKeyMiddleware, (req, res) => {
+  const now = Date.now();
+
+  // Jika cache masih valid, gunakan data cache
+  if (trendingCache && now - trendingCacheTimestamp < CACHE_DURATION) {
+    return res.json({ trendingNews: trendingCache });
+  }
+
+  // Jika cache kadaluarsa, perbarui cache
+  const trendingNews = newsData
+    .sort((a, b) => b.accessCount - a.accessCount)
+    .slice(0, 5);
+
+  trendingCache = trendingNews;
+  trendingCacheTimestamp = now;
+
+  res.json({ trendingNews });
 });
 
 // Jalankan server
